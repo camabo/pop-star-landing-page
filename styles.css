@@ -10,21 +10,21 @@
 
 h1 {
   font-family: var(--brand-font-family);
-  font-size: 170px;
-  line-height: 130px;
-  margin-left: 50px;
-  margin-bottom: 25px;
+  font-size: 250px;
+  line-height: 200px;
   color: var(--main-color);
-  opacity: 80%;
-  position: absolute;
-  margin-top: 50px;
+  opacity: 70%;
+  text-align: right;
+  padding-top: 50px;
 }
 
-h2,
-h3,
-h4 {
-  font-family: var(--heading-font-family);
-  color: var(--secondary-color);
+h2 {
+  text-transform: lowercase;
+  font-size: 70px;
+}
+
+h3 {
+  color: var(--accent-2-color);
 }
 
 p {
@@ -39,10 +39,12 @@ html {
   margin: 0;
   background-color: var(--main-color);
 }
+
 a {
   text-decoration: none;
   color: var(--secondary-color);
 }
+
 .back-ground-image {
   background-image: url("/images/first-aid-kit-header-image.png");
   height: 100%;
@@ -53,26 +55,83 @@ a {
 
 nav ul {
   list-style: none;
+  padding-top: 25px;
+  justify-content: end;
 }
 
-nav li {
+nav li a {
   margin: 50px;
   font-family: var(--heading-font-family);
   font-size: 20px;
   color: var(--main-color);
 }
 
-.mid-page-content {
+.about-section,
+.music-section,
+.show-section {
   padding: 50px;
 }
 
-.about-page-content {
-  padding: 50px;
-  background-color: var(--accent-2-color);
+.about-section h2 {
+  color: var(--main-color);
 }
 
-.about-page-content h2 {
+.music-section h2 {
+  color: var(--accent-2-color);
+}
+
+.show-section h2 {
   color: var(--accent-1-color);
-  text-transform: uppercase;
-  font-size: 50px;
+}
+
+.music-section img {
+  height: 300px;
+  margin-bottom: 25px;
+}
+.about-section {
+  background-color: var(--accent-1-color);
+}
+.show-section {
+  background-color: var(--accent-2-color);
+  color: var(--main-color);
+  text-transform: lowercase;
+}
+.btn-brand {
+  background-color: var(--secondary-color);
+  color: var(--accent-2-color);
+}
+
+@media (max-width: 920px) {
+  .back-ground-image {
+    background-image: url("/images/first-aid-kit-header-image.png");
+    height: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 100%;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 50px;
+    color: var(--main-color);
+    text-align: left;
+  }
+
+  nav ul {
+    padding-top: 25px;
+    padding-left: 50px;
+    padding-right: 0px;
+  }
+
+  nav li a {
+    font-family: var(--heading-font-family);
+    font-size: 18px;
+    color: var(--main-color);
+    margin: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
 }

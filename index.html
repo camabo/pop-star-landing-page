@@ -13,41 +13,174 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --main-color: #c8be42;
+            --secondary-color: #104a6d;
+            --accent-1-color: #d96566;
+            --accent-2-color: #2990a9;
+            --brand-font-family: "Cherry Swash", cursive;
+            --heading-font-family: "Shanti", sans-serif;
+            --default-font-family: "Shanti", sans-serif;
+        }
 
+        h1 {
+            font-family: var(--brand-font-family);
+            font-size: 250px;
+            line-height: 200px;
+            color: var(--main-color);
+            opacity: 70%;
+            text-align: right;
+            padding-top: 50px;
+        }
+
+        h2 {
+            text-transform: lowercase;
+            font-size: 70px;
+        }
+
+        h3 {
+            color: var(--accent-2-color);
+        }
+
+        p {
+            font-family: var(--default-font-family);
+            color: var(--secondary-color);
+            font-size: 18px;
+        }
+
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            background-color: var(--main-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--secondary-color);
+        }
+
+        .back-ground-image {
+            background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/073/997/original/first-aid-kit-header-image.png?1680045981");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        nav ul {
+            list-style: none;
+            padding-top: 25px;
+            justify-content: end;
+        }
+
+        nav li a {
+            margin: 50px;
+            font-family: var(--heading-font-family);
+            font-size: 20px;
+            color: var(--main-color);
+        }
+
+        .about-section,
+        .music-section,
+        .show-section {
+            padding: 50px;
+        }
+
+        .about-section h2 {
+            color: var(--main-color);
+        }
+
+        .music-section h2 {
+            color: var(--accent-2-color);
+        }
+
+        .show-section h2 {
+            color: var(--accent-1-color);
+        }
+
+        .music-section img {
+            height: 300px;
+            margin-bottom: 25px;
+        }
+
+        .about-section {
+            background-color: var(--accent-1-color);
+        }
+
+        .show-section {
+            background-color: var(--accent-2-color);
+            color: var(--main-color);
+            text-transform: lowercase;
+        }
+
+        .btn-brand {
+            background-color: var(--secondary-color);
+            color: var(--accent-2-color);
+        }
+
+        @media (max-width: 920px) {
+            .back-ground-image {
+                background-image: url("/images/first-aid-kit-header-image.png");
+                height: 80%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                opacity: 100%;
+            }
+
+            h1 {
+                font-size: 40px;
+                line-height: 50px;
+                color: var(--main-color);
+                text-align: left;
+            }
+
+            nav ul {
+                padding-top: 25px;
+                padding-left: 50px;
+                padding-right: 0px;
+            }
+
+            nav li a {
+                font-family: var(--heading-font-family);
+                font-size: 18px;
+                color: var(--main-color);
+                margin: 20px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
     <div class="back-ground-image">
-        <h1>First <br> Aid <br> Kit</h1>
+        <div class="d-flex"></div>
         <nav>
-            <ul class="d-flex justify-content-end">
+            <ul class="d-flex">
                 <li>
-                    About
+                    <a href="#about">About</a>
                 </li>
                 <li>
-                    Music
+                    <a href="#music">Music</a>
                 </li>
                 <li>
-                    Shows
+                    <a href="#shows">Shows</a>
                 </li>
             </ul>
         </nav>
+        <h1>First <br>Aid <br>Kit</h1>
 
     </div>
-    <div class="mid-page-content text-center">
-        <h3>Their fifth studio album is the follow-up to 2018’s Ruins, and the second single released from the record is
-            <a href="https://soundcloud.com/firstaidkit/out-of-my-head">“Out of My
-                Head.”</a>
-        </h3>
-
-    </div>
-    <div class="about-page-content">
-        <h2>About First Aid Kit</h2>
+    <div class="about-section">
+        <h2 id="about">About</h2>
         <p>A Swedish indie folk duo with a devoted international following, First Aid Kit blend the bright vocal
             harmonies and
             pastoral, contemplative songwriting of sisters Klara and Johanna Söderberg. After receiving radio
@@ -86,7 +219,116 @@
             tour, one
             that will bring them to Denver in May of 2023.</p>
     </div>
-
+    <div class="music-section">
+        <h2 id="music">Music</h2>
+        <div class="row mt-5">
+            <div class="col-md">
+                <iframe width="300px" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/25202759&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                <div
+                    style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                    <a href="https://soundcloud.com/wichita-recordings" title="Wichita Recordings" target="_blank"
+                        style="color: #cccccc; text-decoration: none;"></a><a
+                        href="https://soundcloud.com/wichita-recordings/first-aid-kit-the-lions-roar-1"
+                        title="First Aid Kit - The Lion&#x27;s Roar" target="_blank"
+                        style="color: #cccccc; text-decoration: none;"></a>
+                </div>
+                <h3>Lion's Roar</h3>
+                <p>2012</p>
+            </div>
+            <div class="col-md">
+                <iframe width="300px" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/256057888&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                <div
+                    style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                    <a href="https://soundcloud.com/firstaidkit" title="First Aid Kit" target="_blank"
+                        style="color: #cccccc; text-decoration: none;"></a><a
+                        href="https://soundcloud.com/firstaidkit/stay-gold-1" title="Stay Gold" target="_blank"
+                        style="color: #cccccc; text-decoration: none;"></a>
+                </div>
+                <h3>Stay Gold</h3>
+                <p>2014</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md">
+                <iframe width="300" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/378389111&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                <div
+                    style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                    <a href="https://soundcloud.com/firstaidkit" title="First Aid Kit" target="_blank"
+                        style="color: #cccccc; text-decoration: none;"></a><a
+                        href="https://soundcloud.com/firstaidkit/ruins" title="Ruins" target="_blank"
+                        style="color: #cccccc; text-decoration: none;"></a>
+                </div>
+                <h3>Ruins</h3>
+                <p>2018</p>
+            </div>
+            <div class="col-md">
+                <iframe width="300" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1373777632&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                <div
+                    style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                    <a href="https://soundcloud.com/firstaidkit" title="First Aid Kit" target="_blank"
+                        style="color: #cccccc; text-decoration: none;"></a><a
+                        href="https://soundcloud.com/firstaidkit/palomino" title="Palomino" target="_blank"
+                        style="color: #cccccc; text-decoration: none;"></a>
+                </div>
+                <h3>Palomino</h3>
+                <p>2022</p>
+            </div>
+        </div>
+    </div>
+    <div class="show-section">
+        <h2 id="shows">Shows</h2>
+        <div class="show-dates-list">
+            <div class="row mb-3">
+                <div class="col-lg">
+                    <h5>Monday, May 15</h5>
+                </div>
+                <div class="col-lg">
+                    <h5>Fox Theatre</h5>
+                </div>
+                <div class="col-lg">
+                    <h5>Oakland, CA</h5>
+                </div>
+                <div class="col-lg">
+                    <a href="https://www.bandsintown.com/t/103884057?affil_code=js_www.firstaidkitband.com&app_id=js_www.firstaidkitband.com&came_from=242&custom=true&utm_campaign=ticket&utm_medium=web&utm_source=widget"
+                        target="_blank" class="btn btn-brand">Tickets</a>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-lg">
+                    <h5>Tuesday, May 16</h5>
+                </div>
+                <div class="col-lg">
+                    <h5>Hollywood Palladium</h5>
+                </div>
+                <div class="col-lg">
+                    <h5>Los Angeles, CA</h5>
+                </div>
+                <div class="col-lg">
+                    <a href="https://www.bandsintown.com/t/103884062?affil_code=js_www.firstaidkitband.com&app_id=js_www.firstaidkitband.com&came_from=242&utm_campaign=ticket&utm_medium=web&utm_source=widget"
+                        target="_blank" class="btn btn-brand">Tickets</a>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-lg">
+                    <h5>Wednesday, May 17</h5>
+                </div>
+                <div class="col-lg">
+                    <h5>The Van Buren</h5>
+                </div>
+                <div class="col-lg">
+                    <h5>Phoenix, AZ</h5>
+                </div>
+                <div class="col-lg">
+                    <a href="https://www.bandsintown.com/t/103884067?affil_code=js_www.firstaidkitband.com&app_id=js_www.firstaidkitband.com&came_from=242&utm_campaign=ticket&utm_medium=web&utm_source=widget"
+                        target="_blank" class="btn btn-brand">Tickets</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
