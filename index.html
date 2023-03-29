@@ -64,6 +64,13 @@
             color: var(--secondary-color);
         }
 
+        .h1-small-screen {
+            font-size: 50px;
+            padding-top: 0px;
+            text-align: center;
+            line-height: 50px;
+        }
+
         .back-ground-image {
             background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/073/997/original/first-aid-kit-header-image.png?1680045981");
             height: 100%;
@@ -133,17 +140,10 @@
                 opacity: 100%;
             }
 
-            h1 {
-                font-size: 40px;
-                line-height: 50px;
-                color: var(--main-color);
-                text-align: left;
-            }
-
             nav ul {
-                padding-top: 25px;
-                padding-left: 50px;
-                padding-right: 0px;
+                justify-content: center;
+                padding-left: 0px;
+                margin-bottom: 0px;
             }
 
             nav li a {
@@ -176,7 +176,8 @@
                 </li>
             </ul>
         </nav>
-        <h1>First <br>Aid <br>Kit</h1>
+        <h1 class="d-none d-lg-block">First <br>Aid <br>Kit</h1>
+        <h1 class="d-block d-lg-none h1-small-screen">First Aid Kit</h1>
 
     </div>
     <div class="about-section">
